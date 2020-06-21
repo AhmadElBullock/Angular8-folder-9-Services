@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { LoggingService } from '../logging.service';
 import { AccountService } from '../account.service';
 
@@ -8,7 +8,7 @@ import { AccountService } from '../account.service';
   styleUrls: ['./new-account.component.css']
 })
 export class NewAccountComponent {
-  @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
+  //@Output() accountAdded = new EventEmitter<{name: string, status: string}>();
 
   constructor(private loggingService: LoggingService, private accountService: AccountService) {}
 

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { LoggingService } from '../logging.service';
 import { AccountService } from '../account.service';
 
@@ -10,7 +10,7 @@ import { AccountService } from '../account.service';
 export class AccountComponent {
   @Input() account: {name: string, status: string};
   @Input() id: number;
-  @Output() statusChanged = new EventEmitter<{id: number, newStatus: string}>();
+  //@Output() statusChanged = new EventEmitter<{id: number, newStatus: string}>();
 
   constructor(private loggingService: LoggingService, private accountService: AccountService) {}
 
